@@ -14,7 +14,8 @@
 
 ## Aperçu du projet
 
-Ce projet est conçu comme un environnement pour tester et valider les configurations Docker, spécifiquement adapté au projet *Inception* de l'école 42. La commande clé, `make eval`, automatise la validation de plusieurs composants, tels que les Dockerfiles, le fichier `docker-compose.yml`, les variables d'environnement, et les configurations SSL/TLS, en s'assurant que le système respecte les bonnes pratiques de Docker.
+Ce dépôt contient uniquement un **Makefile** destiné à être utilisé par les étudiants de l'école 42 pour valider les configurations Docker dans le cadre de projets comme *Inception*. La commande principale, `make eval`, permet de s'assurer que les bonnes pratiques Docker sont respectées en vérifiant les fichiers de configuration, les variables d'environnement et les paramètres de sécurité.
+
 
 ## Description
 
@@ -34,20 +35,40 @@ Avant de lancer le projet, assurez-vous que votre environnement respecte les pr�
 - **Docker Compose** : Version `v2.28.1` ou ultérieure.
 - **GNU Make** : Version `4.3` ou ultérieure.
 - Système d'exploitation : **Linux** (Ubuntu/Debian recommandé).
+- **OpenSSL** : 3.0.2
+- **ss** (iproute2) : iproute2-5.15.0
+- **xdg-open** : 1.1.3
+- **curl** : 7.81.0
+- **grep** : 3.7
 
 ## Installation et Configuration
 
 ### Étape 1 : Cloner le dépôt
 
+
+Clonez ce dépôt pour récupérer le **Makefile** :
 ```bash
-git clone https://github.com/votre-repo/inception.git
-cd inception
+git clone git@github.com:raveriss/docker-eval-suite.git
 ```
 
-### Étape 2 : Configurer le fichier .env
-Le fichier `.env` contient les variables d'environnement nécessaires à votre configuration Docker. Remplissez-le correctement en ajoutant les variables suivantes :
+### Étape 2 : Copier le Makefile dans votre projet
+Placez le fichier Makefile à la racine de votre projet Inception ou tout autre projet Docker que vous souhaitez valider.
 
 ```bash
+cp Makefile /chemin/vers/votre/projet/
+```
+
+### Étape 3 : Lancer la commande make eval
+Une fois le Makefile placé dans la racine de votre projet, exécutez la commande suivante pour lancer la validation :
+
+```bash
+make eval
+```
+
+### Étape 4 : Configurer le fichier .env
+Le fichier `.env` contient les variables d'environnement nécessaires à votre configuration Docker. Remplissez-le correctement en ajoutant les variables suivantes :
+
+```env
 # Nom de domaine pour le site WordPress
 DOMAIN_NAME=student.42.fr
 
@@ -89,7 +110,7 @@ SECOND_USER_EMAIL=seconduser@exemple.com
 ```
 Assurez-vous de ne pas exposer d'informations sensibles dans votre fichier .env.
 
-### Étape 3 : Valider la configuration
+### Étape 5 : Valider la configuration
 Lancez la commande suivante pour démarrer le processus de validation :
 
 ```bash
@@ -149,6 +170,7 @@ Message d'erreur :
 ```
 Solution : Assurez-vous de créer un fichier `.env` dans le répertoire srcs avec toutes les variables requises.
 
+
 2. Dockerfile invalide
 Message d'erreur :
 
@@ -157,6 +179,7 @@ Message d'erreur :
 ```
 Solution : Vérifiez que chaque répertoire de service (ex : nginx, wordpress, mariadb) contient un Dockerfile valide et complet.
 
+
 3. SSL/TLS non configuré
 Message d'erreur :
 
@@ -164,6 +187,7 @@ Message d'erreur :
 [Erreur] Aucun certificat SSL/TLS détecté.
 ```
 Solution : Assurez-vous que votre service NGINX est configuré avec un certificat SSL/TLS et fonctionne sur le port 443.
+
 
 4. Configurations interdites dans docker-compose.yml
 Message d'erreur :
