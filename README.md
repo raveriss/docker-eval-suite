@@ -55,7 +55,8 @@ git clone git@github.com:raveriss/docker-eval-suite.git
 Placez le fichier Makefile à la racine de votre projet Inception ou tout autre projet Docker que vous souhaitez valider.
 
 ```bash
-cp Makefile /chemin/vers/votre/projet/
+made-f0Ar7s1% ls /chemin/vers/votre/projet/
+Makefile  srcs
 ```
 
 ### Étape 3 : Lancer la commande make eval
