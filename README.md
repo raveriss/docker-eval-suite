@@ -1,5 +1,17 @@
 # Projet Inception - Validation des configurations Docker avec `make eval`
 
+<div align="center">
+  <img src="https://img.shields.io/badge/container-Docker-blue" alt="Docker">
+  <img src="https://img.shields.io/badge/docker%20compose-v2.28.1-blue" alt="Docker Compose">
+  <img src="https://img.shields.io/badge/makefile-eval-orange" alt="Makefile Eval">
+  <img src="https://img.shields.io/badge/database-MariaDB-blue" alt="MariaDB">
+  <img src="https://img.shields.io/badge/web%20server-Nginx-green" alt="Nginx">
+  <img src="https://img.shields.io/badge/cms-WordPress-blueviolet" alt="WordPress">
+  <img src="https://img.shields.io/badge/ssl-TLSv1.2%2Fv1.3-brightgreen" alt="SSL TLS">
+  <img src="https://img.shields.io/badge/school-42-green" alt="42">
+  <img src="https://img.shields.io/badge/42-Paris-blue" alt="42 Paris">
+</div>
+
 ## Aperçu du projet
 
 Ce projet est conçu comme un environnement pour tester et valider les configurations Docker, spécifiquement adapté au projet *Inception* de l'école 42. La commande clé, `make eval`, automatise la validation de plusieurs composants, tels que les Dockerfiles, le fichier `docker-compose.yml`, les variables d'environnement, et les configurations SSL/TLS, en s'assurant que le système respecte les bonnes pratiques de Docker.
