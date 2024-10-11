@@ -10,8 +10,6 @@
   <img src="https://img.shields.io/badge/ssl-TLSv1.2%2Fv1.3-brightgreen" alt="SSL TLS">
   <img src="https://img.shields.io/badge/school-42-green" alt="42">
   <img src="https://img.shields.io/badge/42-Paris-blue" alt="42 Paris">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=raveriss.mon-projet" alt="Clone Badge">
-
 </div>
 
 ## Aperçu du projet
