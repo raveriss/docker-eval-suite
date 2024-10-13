@@ -112,16 +112,6 @@ SECOND_USER_EMAIL=seconduser@exemple.com
 Assurez-vous de ne pas exposer d'informations sensibles dans votre fichier .env.
 
 ### Étape 5 : Valider la configuration
-Lancez la commande suivante pour démarrer le processus de validation :
-
-Cette commande va :
-
-Vérifier la présence d'un fichier `.env` valide.
-S'assurer que tous les fichiers nécessaires (ex : Dockerfiles, docker-compose.yml) sont présents.
-Valider les paramètres de sécurité de Docker (ex : ports, certificats SSL/TLS).
-### Utilisation de la commande `make eval`
-#### Détails de la commande
-La commande make eval effectue plusieurs vérifications importantes :
 
 **Validation du fichier** `.env` :
 S'assure que toutes les variables requises sont présentes.
