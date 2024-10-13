@@ -114,9 +114,6 @@ Assurez-vous de ne pas exposer d'informations sensibles dans votre fichier .env.
 ### Étape 5 : Valider la configuration
 Lancez la commande suivante pour démarrer le processus de validation :
 
-```bash
-make eval
-```
 Cette commande va :
 
 Vérifier la présence d'un fichier `.env` valide.
